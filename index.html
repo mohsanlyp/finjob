@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Finance, investment, risk and FP&amp;A roles in Italy, updated every morning.">
+<title>FinJob · Finance jobs in Italy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: one reading column. Header with last scan time and the scan button, then a time-window switch, filters, and job cards with CV save buttons. */
+  :root {
+    --bg: #f5f6f8; --panel: #ffffff; --fg: #17202b; --muted: #5b6676; --line: #dce1e8;
+    --accent: #1f3a5f; --accent-fg: #ffffff; --soft: #e8eef6;
+    --ok: #1e7a4d; --warn: #8a5f00; --bad: #b3261e; --hl: #fff6d2; --new: #1e7a4d;
+    --display: "Source Serif 4", Georgia, serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #10151c; --panel: #17202a; --fg: #e7ecf2; --muted: #9aa6b5; --line: #2a3542;
+    --accent: #8db4e6; --accent-fg: #0d1520; --soft: #1e2b3a;
+    --ok: #6fd3a0; --warn: #e8c063; --bad: #f2948d; --hl: #2c2a1a; --new: #6fd3a0; color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --bg: #10151c; --panel: #17202a; --fg: #e7ecf2; --muted: #9aa6b5; --line: #2a3542;
+    --accent: #8db4e6; --accent-fg: #0d1520; --soft: #1e2b3a;
+    --ok: #6fd3a0; --warn: #e8c063; --bad: #f2948d; --hl: #2c2a1a; --new: #6fd3a0; color-scheme: dark }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45; }
+  .wrap { max-width: 48rem; margin-inline: auto; padding: 20px 16px 48px; display: flex; flex-direction: column; gap: 16px; }
+  header { display: flex; flex-direction: column; gap: 10px; }
+  h1 { font-family: var(--display); font-weight: 600; font-size: 1.75rem; line-height: 1.2; margin: 0; text-wrap: balance; }
+  .sub { margin: 0; color: var(--muted); font-size: 14px; }
+  .scan { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .scan-text { flex: 1 1 14rem; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .scan-text b { font-weight: 600; }
+  .scan-text span { color: var(--muted); font-size: 13.5px; }
+  button { font: inherit; cursor: pointer; }
+  button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .primary { font-size: 14.5px; font-weight: 600; border: 0; border-radius: 9px; padding: 10px 16px; background: var(--accent); color: var(--accent-fg); white-space: nowrap; }
+  .primary[disabled] { opacity: .55; cursor: default; }
+  .spin { display: inline-block; width: .8em; height: .8em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+  @media (prefers-reduced-motion: no-preference) { .spin { animation: rot .8s linear infinite; } }
+  @keyframes rot { to { transform: rotate(360deg); } }
+  .window { display: flex; gap: 6px; flex-wrap: wrap; }
+  .window button { font-size: 14px; border: 1px solid var(--line); background: var(--panel); color: var(--fg); border-radius: 999px; padding: 7px 14px; }
+  .window button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  .window .n { font-variant-numeric: tabular-nums; opacity: .75; margin-left: 4px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .filters input[type=search], .filters select { font: inherit; font-size: 14px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--fg); min-width: 0; }
+  .filters input[type=search] { flex: 1 1 12rem; }
+  .check { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); }
+  .count { color: var(--muted); font-size: 13px; margin: 0; }
+  .list { display: flex; flex-direction: column; gap: 10px; }
+  .job { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .job.hl { background: var(--hl); border-color: var(--accent); }
+  .top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+  .top > div { min-width: 0; }
+  .title { font-weight: 600; font-size: 15.5px; color: var(--fg); text-decoration: none; overflow-wrap: anywhere; }
+  a.title:hover { text-decoration: underline; }
+  .new { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .05em; color: var(--new); border: 1px solid currentColor; border-radius: 999px; padding: 0 6px; margin-left: 6px; vertical-align: 2px; }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .note { font-size: 13.5px; margin: 0; }
+  .fit { font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; padding-top: 3px; }
+  .fit.High { color: var(--ok); } .fit.Medium { color: var(--warn); } .fit.Related { color: var(--muted); } .fit.Low { color: var(--bad); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .save { font-size: 13.5px; font-weight: 600; border: 1px solid var(--accent); border-radius: 8px; padding: 7px 12px; background: var(--soft); color: var(--fg); }
+  .save[disabled] { opacity: .55; cursor: default; }
+  .status { font-size: 13px; color: var(--muted); }
+  .empty { color: var(--muted); font-size: 14px; background: var(--panel); border: 1px dashed var(--line); border-radius: 12px; padding: 18px; text-align: center; }
+  .foot { color: var(--muted); font-size: 12.5px; }
+  a.save { text-decoration: none; display: inline-block; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>Finance jobs in Italy</h1>
+    <p class="sub">Finance, investment, risk and FP&amp;A roles from Indeed, Glassdoor and Jooble, each with a CV tailored to the job.</p>
+    <div class="scan" id="scanBox">
+      <div class="scan-text">
+        <b id="updated">Loading…</b>
+        <span>New roles and CVs are added every morning at 7:50 (Rome time).</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="window" role="group" aria-label="Posted">
+    <button type="button" data-w="1" aria-pressed="false">Last 24 hours<span class="n" id="n1"></span></button>
+    <button type="button" data-w="7" aria-pressed="false">Last 7 days<span class="n" id="n7"></span></button>
+    <button type="button" data-w="all" aria-pressed="false">All<span class="n" id="nall"></span></button>
+  </div>
+
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search company, role or city" aria-label="Search company, role or city">
+    <select id="fitSel" aria-label="Fit">
+      <option value="">Any fit</option>
+      <option value="High">High fit</option>
+      <option value="Medium">Medium fit</option>
+      <option value="Related">Related</option>
+    </select>
+    <select id="citySel" aria-label="City"><option value="">All cities</option></select>
+    <label class="check"><input id="lowChk" type="checkbox"> Show roles that don't fit</label>
+  </div>
+
+  <p class="count" id="count"></p>
+  <div class="list" id="list"><div class="empty">Loading jobs…</div></div>
+  <p class="foot">LinkedIn isn't scanned because it blocks automated reading. CVs use only facts from my own CV; contact details are added when I apply.</p>
+</div>
+
+<script>
+  const TRIGGER_ID = 'trig_01GgpuxecmKPKKkbZWMvtHUt';
+  const SERVER = 'Claude Code Remote';
+  const fitOrder = { High: 0, Medium: 1, Related: 2, Low: 3 };
+  const state = { win: null, q: '', fit: '', city: '', low: false };
+  const target = location.hash.slice(1);
+  let jobs = [], updatedAt = null, latestSeen = '';
+  
+
+  const $ = (id) => document.getElementById(id);
+  const listEl = $('list');
+
+  // Dates: "posted" is YYYY-MM-DD; compare on local calendar days.
+  const dayStart = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const ageDays = (iso) => {
+    const p = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso || ''));
+    if (!p) return Infinity;
+    const d = new Date(+p[1], +p[2] - 1, +p[3]);
+    return Math.round((dayStart(new Date()) - d) / 86400000);
+  };
+  const ageLabel = (iso) => {
+    const a = ageDays(iso);
+    if (a === Infinity) return '';
+    if (a <= 0) return 'Posted today';
+    if (a === 1) return 'Posted yesterday';
+    return `Posted ${a} days ago`;
+  };
+  const inWindow = (j, w) => w === 'all' || ageDays(j.posted) <= (w === '1' ? 1 : 7);
+  const slug = (s) => String(s || '').replace(/\(.*?\)/g, '').trim().replace(/[^A-Za-z0-9]+/g, '_').replace(/^_|_$/g, '').slice(0, 40);
+  const timeFmt = (d) => d.toLocaleString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+
+  function visibleBase() {
+    return jobs.filter((j) => state.low || j.fit !== 'Low');
+  }
+
+  function render() {
+    const base = visibleBase();
+    $('n1').textContent = base.filter((j) => inWindow(j, '1')).length;
+    $('n7').textContent = base.filter((j) => inWindow(j, '7')).length;
+    $('nall').textContent = base.length;
+    document.querySelectorAll('.window button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.w === state.win)));
+
+    const q = state.q.toLowerCase();
+    const rows = base
+      .filter((j) => inWindow(j, state.win))
+      .filter((j) => !state.fit || j.fit === state.fit)
+      .filter((j) => !state.city || j.city === state.city)
+      .filter((j) => !q || [j.title, j.company, j.city, j.role_group].join(' ').toLowerCase().includes(q))
+      .sort((a, b) => (b.job_id === target) - (a.job_id === target)
+        || String(b.posted).localeCompare(String(a.posted))
+        || (fitOrder[a.fit] ?? 9) - (fitOrder[b.fit] ?? 9));
+
+    $('count').textContent = rows.length === 1 ? '1 role' : `${rows.length} roles`;
+    listEl.replaceChildren();
+    if (!rows.length) {
+      const e = document.createElement('div'); e.className = 'empty';
+      e.textContent = state.win === '1'
+        ? 'No new finance roles posted in the last 24 hours. Tap "Find new jobs" to check again, or switch to Last 7 days.'
+        : 'No roles match these filters.';
+      listEl.append(e); return;
+    }
+    for (const j of rows) listEl.append(card(j));
+    if (target) { const el = document.getElementById(target); if (el) el.scrollIntoView({ block: 'start' }); }
+  }
+
+  function card(j) {
+    const el = document.createElement('article');
+    el.className = 'job' + (j.job_id === target ? ' hl' : '');
+    el.id = j.job_id;
+
+    const top = document.createElement('div'); top.className = 'top';
+    const left = document.createElement('div');
+    const href = typeof j.link === 'string' && /^https:\/\//.test(j.link) ? j.link : null;
+    const title = document.createElement(href ? 'a' : 'span');
+    title.className = 'title'; title.textContent = j.title;
+    if (href) { title.href = href; title.target = '_blank'; title.rel = 'noopener'; }
+    left.append(title);
+    if (j.first_seen && j.first_seen === latestSeen) { const n = document.createElement('span'); n.className = 'new'; n.textContent = 'NEW'; left.append(n); }
+    const meta = document.createElement('div'); meta.className = 'meta';
+    meta.textContent = [j.company, j.city, ageLabel(j.posted), j.source ? 'via ' + j.source : ''].filter(Boolean).join(' · ');
+    left.append(meta);
+    const fit = document.createElement('span'); fit.className = 'fit ' + (j.fit || ''); fit.textContent = (j.fit || '?') + ' fit';
+    top.append(left, fit);
+    el.append(top);
+
+    if (j.note) { const p = document.createElement('p'); p.className = 'note'; p.textContent = j.note; el.append(p); }
+
+    const actions = document.createElement('div'); actions.className = 'actions';
+    const status = document.createElement('span'); status.className = 'status';
+    let any = false;
+    for (const [lang, label] of [['en', 'Save English CV'], ['it', 'Salva CV italiano']]) {
+      if (!j[lang]) continue;
+      any = true;
+      if (!/^cvs\/[A-Za-z0-9._~-]+\.pdf$/.test(j[lang])) continue;
+      const b = document.createElement('a'); b.className = 'save'; b.textContent = label;
+      b.href = j[lang];
+      b.setAttribute('download', `Muhammad_Mohsan_CV_${slug(j.company)}_${lang.toUpperCase()}.pdf`);
+      actions.append(b);
+    }
+    if (!any) status.textContent = 'No CV made for this role.';
+    actions.append(status);
+    el.append(actions);
+    return el;
+  }
+
+  // ---- wiring ----
+  document.querySelectorAll('.window button').forEach((b) => b.addEventListener('click', () => { state.win = b.dataset.w; render(); }));
+  $('q').addEventListener('input', (e) => { state.q = e.target.value.trim(); render(); });
+  $('fitSel').addEventListener('change', (e) => { state.fit = e.target.value; render(); });
+  $('citySel').addEventListener('change', (e) => { state.city = e.target.value; render(); });
+  $('lowChk').addEventListener('change', (e) => { state.low = e.target.checked; render(); });
+
+  fetch('jobs.json', { cache: 'no-cache' }).then((r) => r.json()).then((d) => {
+    jobs = Array.isArray(d && d.jobs) ? d.jobs : [];
+    updatedAt = d && d.updated_at ? new Date(d.updated_at) : null;
+    latestSeen = jobs.reduce((m, j) => (j.first_seen > m ? j.first_seen : m), '');
+    $('updated').textContent = updatedAt && !isNaN(updatedAt) ? 'Last scan: ' + timeFmt(updatedAt) : 'Last scan time unknown';
+    const cities = Array.from(new Set(jobs.map((j) => j.city).filter(Boolean))).sort();
+    const sel = $('citySel');
+    cities.forEach((c) => sel.append(new Option(c, c)));
+    const t = jobs.find((j) => j.job_id === target);
+    if (t) { state.win = 'all'; if (t.fit === 'Low') { state.low = true; $('lowChk').checked = true; } }
+    else state.win = jobs.some((j) => j.fit !== 'Low' && inWindow(j, '1')) ? '1' : '7';
+    render();
+  }).catch(() => {
+    listEl.replaceChildren();
+    const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Couldn’t load the job list. Reload the page.'; listEl.append(e);
+    $('updated').textContent = 'Job list didn’t load';
+  });
+
+</script>
+</body>
+</html>
