@@ -1,0 +1,20 @@
+name: Probe register sources
+on:
+  push:
+    paths: ['scripts/probe_registers.py', '.github/workflows/probe-registers.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/probe_registers.py
+      - name: Commit report
+        run: |
+          git config user.name "finjob-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports
+          git commit -m "Register probe report" || echo "nothing to commit"
+          git push
