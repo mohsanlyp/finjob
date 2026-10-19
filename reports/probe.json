@@ -1,0 +1,116 @@
+{
+ "ecb_lists_page": {
+  "url": "https://www.ecb.europa.eu/stats/financial_corporations/list_of_financial_institutions/html/index.en.html",
+  "status": 200,
+  "ctype": "text/html; charset=UTF-8",
+  "bytes": 130557,
+  "final_url": "https://www.ecb.europa.eu/stats/financial_corporations/list_of_financial_institutions/html/index.en.html",
+  "data_links": [
+   "/stats/pdf/money/ecb.ifd_overview_2009_2013.en.zip",
+   "/stats/pdf/money/ecb.ifd_overview_2009_2013.en.zip?423c5b880d80ee1f936316fca5d433c2",
+   "/stats/pdf/money/ecb.ifd_overview_2014_2018.en.zip",
+   "/stats/pdf/money/ecb.ifd_overview_2014_2018.en.zip?fa8f1d8c3b3f4494e381063daca91fc2",
+   "/stats/pdf/money/ecb.ifd_overview_2019-2024.en.zip",
+   "/stats/pdf/money/ecb.ifd_overview_2019-2024.en.zip?6c81f370d0615d9100a48e52218e2c31",
+   "/stats/pdf/money/ecb.ifd_overview_2025.en.zip",
+   "/stats/pdf/money/ecb.ifd_overview_2025.en.zip?c2555ddd1b8de70294f3577ac4377e0f",
+   "/stats/pdf/money/ecb.ifd_overview_2026.en.zip",
+   "/stats/pdf/money/ecb.ifd_overview_2026.en.zip?b3d2198e49d0f87b1658c25641fa72ee",
+   "/stats/pdf/money/fvc/ecb.fvcd_Overview_2009-2013.en.zip",
+   "/stats/pdf/money/fvc/ecb.fvcd_Overview_2009-2013.en.zip?728b8dd08f6687544365a4ab6d16ecb3",
+   "/stats/pdf/money/fvc/ecb.fvcd_Overview_2014-2018.en.zip",
+   "/stats/pdf/money/fvc/ecb.fvcd_Overview_2014-2018.en.zip?bcebf0e12965e5299af20fe8df627cb8",
+   "/stats/pdf/money/fvc/ecb.fvcd_overview_2019-2023.en.zip",
+   "/stats/pdf/money/fvc/ecb.fvcd_overview_2019-2023.en.zip?1372c30531025f69f51e4867fc61e653",
+   "/stats/pdf/money/fvc/ecb.fvcd_overview_2024-2025.en.zip",
+   "/stats/pdf/money/fvc/ecb.fvcd_overview_2024-2025.en.zip?038d0319da1364b969fb6098019cb52c",
+   "/stats/pdf/money/fvc/ecb.fvcd_overview_2026.en.zip",
+   "/stats/pdf/money/fvc/ecb.fvcd_overview_2026.en.zip?cc628ad0884990e4d688241c02a8bf97",
+   "/stats/pdf/money/ic/ecb.icd_overview.en.zip",
+   "/stats/pdf/money/ic/ecb.icd_overview.en.zip?7970d58d7d91ae7b6aba9e31de1823fc",
+   "/stats/pdf/money/pf/ecb.pfd_overview.en.zip",
+   "/stats/pdf/money/pf/ecb.pfd_overview.en.zip?d201018c342cdbb318869bf71ac3edf9",
+   "/stats/pdf/money/psri/ecb.psrid_overview.en.zip",
+   "/stats/pdf/money/psri/ecb.psrid_overview.en.zip?212b1d07a821203092970cf02a15e3da"
+  ]
+ },
+ "ecb_ssm_list": {
+  "url": "https://www.bankingsupervision.europa.eu/banking/list/who/html/index.en.html",
+  "status": 200,
+  "ctype": "text/html; charset=UTF-8",
+  "bytes": 64012,
+  "final_url": "https://www.bankingsupervision.europa.eu/framework/supervised-banks/html/index.en.html",
+  "data_links": [
+   "/ecb/pub/pdf/ssm.listofsupervisedentities202608.en.xlsx",
+   "/ecb/pub/pdf/ssm.listofsupervisedentities202608_annex_changes.en.xlsx"
+  ]
+ },
+ "eba_cir": {
+  "url": "https://euclid.eba.europa.eu/register/cir/disclaimer",
+  "status": 200,
+  "ctype": "text/html",
+  "bytes": 685,
+  "final_url": "https://euclid.eba.europa.eu/register/cir/disclaimer",
+  "data_links": []
+ },
+ "eba_cir_search": {
+  "url": "https://euclid.eba.europa.eu/register/cir/search",
+  "status": 200,
+  "ctype": "text/html",
+  "bytes": 685,
+  "final_url": "https://euclid.eba.europa.eu/register/cir/search",
+  "data_links": []
+ },
+ "esma_solr_mifid": {
+  "url": "https://registers.esma.europa.eu/solr/esma_registers_mifid_entities/select?q=*:*&rows=2&wt=json",
+  "error": "<HTTPError 404: 'Not Found'>"
+ },
+ "esma_solr_upreg": {
+  "url": "https://registers.esma.europa.eu/solr/esma_registers_upreg/select?q=*:*&rows=2&wt=json",
+  "status": 200,
+  "ctype": "application/json;charset=utf-8",
+  "bytes": 1188,
+  "final_url": "https://registers.esma.europa.eu/solr/esma_registers_upreg/select?q=*:*&rows=2&wt=json",
+  "sample": "{\n  \"responseHeader\":{\n    \"status\":0,\n    \"QTime\":0,\n    \"params\":{\n      \"q\":\"*:*\",\n      \"rows\":\"2\",\n      \"wt\":\"json\"}},\n  \"response\":{\"numFound\":101636,\"start\":0,\"numFoundExact\":true,\"docs\":[\n      {\n        \"id\":\"aeActivity147\",\n        \"ac_serviceName\":\"Reception and transmission of orders\",\n        \"ac_authorisationNotificationDateStr\":\"12/09/2006\",\n        \"ac_status\":\"Active\",\n        \"ac_comment\":\"\",\n        \"entity_type\":\"aeActivity\",\n        \"_root_\":\"ae42\",\n        \"type_s\":\"child\",\n        \"ac_authorisationEndDate\":\"\",\n        \"ac_authorisationNotificationDate\":\"2006-09-12T00:00:00Z\",\n        \"_version_\":1861996368975888384,\n        \"timestamp\":\"2026-04-09T12:35:14.329Z\"},\n      {\n        \"id\":\"aeActivity214807\",\n        \"ac_serviceName\":\"Execution of orders\",\n        \"ac_authorisationNotificationDateStr\":\"12/09/2006\",\n        \"ac_status\":\"Active\",\n        \"ac_comment\":\"\",\n        \"entity_type\":\"aeActivity\",\n        \"_root_\":\"ae42\",\n        \"type_s\":\"child\",\n        \"ac_authorisationEndDate\":\"\",\n        \"ac_authorisationNotificationDate\":\"2006-09-12T00:00:00Z\",\n        \"_version_\":1861996368975888384,\n        \"timestamp\":\"2026-04-09T12:35:14.329Z\"}]\n  }}\n"
+ },
+ "esma_registers_home": {
+  "url": "https://registers.esma.europa.eu/publication/",
+  "status": 200,
+  "ctype": "text/html;charset=UTF-8",
+  "bytes": 11783,
+  "final_url": "https://registers.esma.europa.eu/publication/",
+  "data_links": []
+ },
+ "esma_isr": {
+  "url": "https://www.esma.europa.eu/publications-and-data/databases-and-registers",
+  "status": 200,
+  "ctype": "text/html; charset=UTF-8",
+  "bytes": 117997,
+  "final_url": "https://www.esma.europa.eu/publications-and-data/databases-and-registers",
+  "data_links": [
+   "/sites/default/files/2024-09/DPE_Register.csv",
+   "/sites/default/files/2026-07/ESMA74-276584410-11027_List_of_data_contributors_to_the_equity_CTP.xlsx",
+   "/sites/default/files/esma_register_sftr_art8_3.xlsx",
+   "/sites/default/files/library/esma34-46-101_esma_register_eltif_art33.xlsx",
+   "/sites/default/files/library/esma_register_emir_art59_3.xlsx",
+   "/sites/default/files/library/esma_register_secr.xlsx",
+   "/sites/default/files/library/list_of_market_makers_and_primary_dealers_1.xlsx",
+   "/sites/default/files/library/sfd_designated_authorities_and_systems.xlsx",
+   "/sites/default/files/library/sovereign_debt_thresholds.xlsx",
+   "/sites/default/files/list_of_branches_of_third-country_firms_authorised_to_provide_investment_services_and_activities_in_eu_jurisdictions.xlsx",
+   "/sites/default/files/position_limits_publication.xlsx"
+  ]
+ },
+ "eiopa_ins": {
+  "url": "https://register.eiopa.europa.eu/registers/register-of-insurance-undertakings",
+  "error": "<HTTPError 403: 'Forbidden'>"
+ },
+ "gleif_api": {
+  "url": "https://api.gleif.org/api/v1/lei-records?page[size]=1",
+  "status": 200,
+  "ctype": "application/vnd.api+json",
+  "bytes": 2765,
+  "final_url": "https://api.gleif.org/api/v1/lei-records?page[size]=1",
+  "sample": "{\"meta\":{\"goldenCopy\":{\"publishDate\":\"2026-10-18T16:00:00Z\"},\"pagination\":{\"currentPage\":1,\"perPage\":1,\"from\":1,\"to\":1,\"total\":3465960,\"lastPage\":3465960}},\"links\":{\"first\":\"https:\\/\\/api.gleif.org\\/api\\/v1\\/lei-records?page%5Bnumber%5D=1&page%5Bsize%5D=1\",\"next\":\"https:\\/\\/api.gleif.org\\/api\\/v1\\/lei-records?page%5Bnumber%5D=2&page%5Bsize%5D=1\",\"last\":\"https:\\/\\/api.gleif.org\\/api\\/v1\\/lei-records?page%5Bnumber%5D=3465960&page%5Bsize%5D=1\"},\"data\":[{\"type\":\"lei-records\",\"id\":\"9845007XEC41CZEE5881\",\"attributes\":{\"lei\":\"9845007XEC41CZEE5881\",\"entity\":{\"legalName\":{\"name\":\"St\\u00e5nggren Invest AB\",\"language\":\"sv\"},\"otherNames\":[],\"transliteratedOtherNames\":[],\"legalAddress\":{\"language\":\"sv\",\"addressLines\":[\"Toppbrinken 34\"],\"addressNumber\":null,\"addressNumberWithinBuilding\":null,\"mailRouting\":null,\"city\":\"SP\\u00c5NGA\",\"region\":\"SE-AB\",\"country\":\"SE\",\"postalCode\":\"163 44\"},\"headquartersAddress\":{\"language\":\"sv\",\"addressLines\":[\"Toppbrinken 34\"],\"addressNumber\":null,\"addressNumberWithinBuilding\":null,\"mailRouting\":null,\"city\":\"SP\\u00c5NGA\",\"region\":\"SE-AB\",\"country\":\"SE\",\"postalCode\":\"163 44\"},\"registeredAt\":{\"id\":\"RA000544\",\"other\":null},\"registeredAs\":\"559034-6044\",\"jurisdiction\":\"SE\",\"category\":\"GENERAL\",\"legalForm\":{\"id\":\"XJHM\",\"other\":null},\"associatedEntity\":{\"lei\":null,\"name\":null},\"status\":\"ACTIVE\",\"expiration\":{\"date\":null,\"reason\":null},\"successorEntity\":{\"lei\":null,\"name\":null},\"successorEntities\":[],\"creationDate\":\"2015-10-26T00:00:00Z\",\"subCategory\":null,\"otherAddre"
+ }
+}
