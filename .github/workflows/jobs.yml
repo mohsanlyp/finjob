@@ -1,0 +1,27 @@
+name: Update finance jobs
+on:
+  schedule:
+    - cron: '30 5 * * *'   # every day 05:30 UTC (07:30 Rome in summer, 06:30 in winter)
+  push:
+    paths: ['scripts/fetch_jobs.py', '.github/workflows/jobs.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: data-commit, cancel-in-progress: false }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/fetch_jobs.py
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+      - name: Commit jobs
+        run: |
+          git config user.name "finjob-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/jobs
+          git commit -m "Update finance jobs" || echo "nothing to commit"
+          git pull --rebase -q origin main && git push
