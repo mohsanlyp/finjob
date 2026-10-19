@@ -1,0 +1,105 @@
+{
+ "started": "2026-10-19T07:14:13Z",
+ "sources": {
+  "esma": {
+   "entities": 13894,
+   "kept_active_head_offices": 10533
+  },
+  "ecb_mfi": {
+   "links": [
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261016.csv",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261016.csv.gz",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261016.csv",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261016.csv.gz"
+   ],
+   "header": [
+    "RIAD_CODE",
+    "LEI",
+    "COUNTRY_OF_REGISTRATION",
+    "NAME",
+    "BOX",
+    "ADDRESS",
+    "POSTAL",
+    "CITY",
+    "CATEGORY",
+    "HEAD_COUNTRY_OF_REGISTRATION",
+    "HEAD_NAME",
+    "HEAD_RIAD_CODE",
+    "HEAD_LEI",
+    "REPORT"
+   ],
+   "rows": 5324,
+   "kept": 5324,
+   "box_values": {
+    "": 4153,
+    "Postfach 1": 576,
+    "Postfach 2": 99,
+    "Postfach 3": 30,
+    "Postfach 4": 23,
+    "Postfach 6": 21,
+    "Postfach 5": 16,
+    "Postfach 8": 11,
+    "Postfach 9": 10,
+    "Postfach 7": 8,
+    "9": 7,
+    "1": 7,
+    "0": 6,
+    "10": 6,
+    "16": 5
+   }
+  },
+  "ecb_insurers": {
+   "member": "IC_Overview/IC_2026_Q2.xlsx",
+   "headers": {
+    "IC_2026_Q2": [
+     "Country of residence",
+     "ID",
+     "LEI",
+     "Name",
+     "Address",
+     "Postal Code",
+     "Postal Box",
+     "City",
+     "Type of insurance corporation",
+     "Head country of residence",
+     "Head ID",
+     "Head LEI",
+     "Head name"
+    ]
+   },
+   "kept": {
+    "IC_2026_Q2": 2168
+   }
+  },
+  "ecb_pension": {
+   "member": "PF_Overview/PF_2026_Q2.xlsx",
+   "headers": {
+    "PF_2026_Q2": [
+     "Country of Residence",
+     "ID",
+     "LEI",
+     "Name",
+     "Address",
+     "Postal Code",
+     "Postal Box",
+     "City",
+     "Type of pension fund",
+     "Is Sponsored",
+     "Manager country of residence",
+     "Manager ID",
+     "Manager name"
+    ]
+   },
+   "kept": {
+    "PF_2026_Q2": 5311
+   }
+  },
+  "ecb_ssm": {
+   "link": "/ecb/pub/pdf/ssm.listofsupervisedentities202608.en.xlsx",
+   "rows": 830
+  }
+ },
+ "total": 19630,
+ "countries": 31,
+ "no_country": 0
+}
