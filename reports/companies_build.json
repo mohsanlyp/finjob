@@ -1,5 +1,5 @@
 {
- "started": "2026-10-19T07:14:13Z",
+ "started": "2026-10-19T07:15:06Z",
  "sources": {
   "esma": {
    "entities": 13894,
@@ -29,23 +29,12 @@
     "REPORT"
    ],
    "rows": 5324,
-   "kept": 5324,
+   "kept": 4928,
    "box_values": {
-    "": 4153,
-    "Postfach 1": 576,
-    "Postfach 2": 99,
-    "Postfach 3": 30,
-    "Postfach 4": 23,
-    "Postfach 6": 21,
-    "Postfach 5": 16,
-    "Postfach 8": 11,
-    "Postfach 9": 10,
-    "Postfach 7": 8,
-    "9": 7,
-    "1": 7,
-    "0": 6,
-    "10": 6,
-    "16": 5
+    "Credit Institution": 4609,
+    "Money Market Fund": 396,
+    "Other Institution": 290,
+    "Central Bank": 29
    }
   },
   "ecb_insurers": {
@@ -99,7 +88,7 @@
    "rows": 830
   }
  },
- "total": 19630,
+ "total": 19234,
  "countries": 31,
  "no_country": 0
 }
