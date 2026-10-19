@@ -112,14 +112,15 @@ def ecb_mfi():
     hi = header_index(rows, 'name') or 0
     head = rows[hi]; info['header'] = head
     ci = find_col(head, 'country_of_registration', 'country'); ni = find_col(head, 'name')
-    bi = find_col(head, 'box', 'type', 'category'); li = find_col(head, 'lei'); ti = find_col(head, 'city', 'town')
+    bi = find_col(head, 'category'); li = find_col(head, 'lei'); ti = find_col(head, 'city', 'town')
     n = 0; types = defaultdict(int)
     for r in rows[hi + 1:]:
         if not r or ni is None or ni >= len(r): continue
         box = (r[bi] if bi is not None and bi < len(r) else '').strip()
         types[box] += 1
         bl = box.lower()
-        ftype = 'Money market fund' if 'money market' in bl or 'mmf' in bl else 'Central bank' if 'central bank' in bl else 'Bank' if ('credit' in bl or 'bank' in bl or not bl) else box or 'Bank'
+        ftype = ('Money market fund' if ('money market' in bl or 'mmf' in bl) else 'Central bank' if 'central bank' in bl
+                 else 'Bank' if ('credit' in bl or 'bank' in bl or not bl) else 'Financial institution')
         if ftype == 'Money market fund': continue  # funds are products, not employers
         add(r[ni], cc(r[ci] if ci is not None and ci < len(r) else ''), ftype, 'ECB', r[li] if li is not None and li < len(r) else '', r[ti] if ti is not None and ti < len(r) else '')
         n += 1
