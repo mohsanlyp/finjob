@@ -7,14 +7,14 @@ from collections import defaultdict
 UA = {'User-Agent': 'Mozilla/5.0 (finjob.eu register indexer; +https://finjob.eu)'}
 REPORT = {'started': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'sources': {}}
 
-def get(url, limit=200_000_000, tries=3):
+def get(url, limit=200_000_000, tries=6):
     for i in range(tries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=180) as r:
                 return r.read(limit), r.headers.get('content-type', ''), r.geturl()
         except Exception as e:
             if i == tries - 1: raise
-            time.sleep(5 * (i + 1))
+            time.sleep(15 * (i + 1))
 
 COUNTRIES = {'AUSTRIA':'AT','BELGIUM':'BE','BULGARIA':'BG','CROATIA':'HR','CYPRUS':'CY','CZECHIA':'CZ','CZECH REPUBLIC':'CZ','DENMARK':'DK','ESTONIA':'EE','FINLAND':'FI','FRANCE':'FR','GERMANY':'DE','GREECE':'GR','HUNGARY':'HU','ICELAND':'IS','IRELAND':'IE','ITALY':'IT','LATVIA':'LV','LIECHTENSTEIN':'LI','LITHUANIA':'LT','LUXEMBOURG':'LU','MALTA':'MT','NETHERLANDS':'NL','NORWAY':'NO','POLAND':'PL','PORTUGAL':'PT','ROMANIA':'RO','SLOVAKIA':'SK','SLOVENIA':'SI','SPAIN':'ES','SWEDEN':'SE','UNITED KINGDOM':'GB','SWITZERLAND':'CH'}
 NAMES = {v: k.title() for k, v in COUNTRIES.items()}; NAMES.update({'CZ': 'Czechia', 'GB': 'United Kingdom', 'EL': 'Greece'})
@@ -190,6 +190,12 @@ for name, fn in [('esma', esma), ('ecb_mfi', ecb_mfi),
         REPORT['sources'][name] = {'error': repr(e)[:500]}
     print(name, json.dumps(REPORT['sources'][name], default=str)[:600], flush=True)
 
+failed = [k for k, v in REPORT['sources'].items() if isinstance(v, dict) and v.get('error')]
+if failed:
+    os.makedirs('reports', exist_ok=True)
+    REPORT['aborted'] = f'Sources failed: {failed}. Kept the previous directory unchanged.'
+    json.dump(REPORT, open('reports/companies_build.json', 'w'), indent=1, default=str)
+    sys.exit(REPORT['aborted'])
 # ---------- write per-country files ----------
 by = defaultdict(list)
 for r in firms.values():
