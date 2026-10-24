@@ -26,15 +26,28 @@ def cc(x):
 firms = {}  # key -> record
 def key_of(name, country, lei):
     return lei.upper() if lei else (re.sub(r'[^a-z0-9]', '', name.lower()) + '|' + country)
+KEEP_UPPER = {'AG','SA','SPA','SRL','BV','NV','GMBH','KG','PLC','LTD','AB','AS','ASA','OY','OYJ','SE','SAS','SL','SGR','SIM','BCC','EG','EGT','AIF','UCITS','UK','EU','II','III','IV','DZ','KBC','ING','ABN','AMRO','BNP','HSBC','UBS','BPER','BNL','CDP','LGT','VP','UBI','MPS','KFW','NRW','LBBW','SEB','DNB','OTP','PKO','BPI','BCP','CGD','ESG','PSA','RCI','VW','BMW','ICCREA','IBL','GE'}
+def tidy(name):
+    name = re.sub(r'\s+', ' ', (name or '')).strip().strip('"\'\u2018\u2019\u201c\u201d ').strip()
+    letters = [ch for ch in name if ch.isalpha()]
+    if letters and sum(ch.isupper() for ch in letters) / len(letters) > 0.85:
+        def fix(w):
+            core = re.sub(r'[^A-Za-zÀ-ÿ]', '', w)
+            if core.upper() in KEEP_UPPER or (len(core) <= 3 and core.upper() not in {'DI','DEL','DE','LA','LE','DES','DER','DIE','VON','UND','ET','DA','DO','DOS','DAS','EN','THE','OF','AND','PER'}): return w
+            return w[:1].upper() + w[1:].lower() if w[:1].isalpha() else w[:2].upper() + w[2:].lower() if len(w) > 1 else w
+        name = ' '.join('-'.join(fix(x) for x in w.split('-')) for w in name.split(' '))
+        name = re.sub(r"\b(Di|Del|Della|Dei|De|La|Le|Des|Der|Die|Von|Und|Et|Da|Do|Dos|Das|En|The|Of|And|Per)\b", lambda m: m.group(1).lower(), name)
+        name = name[:1].upper() + name[1:]
+    return name
 def add(name, country, ftype, source, lei='', city='', web='', services=None, extra=None):
-    name = re.sub(r'\s+', ' ', (name or '')).strip()
+    name = tidy(name)
     if not name or not country: return
     k = key_of(name, country, lei)
     r = firms.get(k)
     if not r:
         r = firms[k] = {'n': name, 'c': country, 't': set(), 's': set(), 'lei': lei or '', 'city': city or '', 'web': web or '', 'svc': set()}
     r['t'].add(ftype); r['s'].add(source)
-    if city and not r['city']: r['city'] = city
+    if city and not r['city']: r['city'] = city.title() if city.isupper() else city
     if web and not r['web']: r['web'] = web
     if lei and not r['lei']: r['lei'] = lei
     for s in services or []: r['svc'].add(s)
