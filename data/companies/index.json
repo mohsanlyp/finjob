@@ -1,26 +1,44 @@
 {
-"updated_at": "2026-10-24T00:51:54Z",
+"updated_at": "2026-10-19T07:15:29Z",
 "countries": [
 {
 "c": "AT",
 "name": "Austria",
-"count": 431,
+"count": 564,
 "types": {
-"Bank": 390,
+"Bank": 391,
+"Investment firm": 458,
+"Systematic internaliser": 6,
+"Approved reporting mechanism": 8,
+"AIFM": 23,
+"UCITS management company": 14,
+"EVC": 18,
 "Insurer": 30,
 "Pension fund": 7,
 "Financial institution": 3,
-"Central bank": 1
+"European Crowdfunding Service Provider": 2,
+"Central bank": 1,
+"Approved publication arrangement": 1,
+"Multilateral trading facility": 1,
+"Regulated market": 1
 }
 },
 {
 "c": "BE",
 "name": "Belgium",
-"count": 346,
+"count": 409,
 "types": {
 "Bank": 79,
+"Investment firm": 28,
+"European Crowdfunding Service Provider": 10,
+"Systematic internaliser": 1,
+"EVC": 7,
 "Pension fund": 165,
 "Insurer": 96,
+"AIFM": 21,
+"UCITS management company": 7,
+"Multilateral trading facility": 2,
+"Regulated market": 1,
 "Financial institution": 5,
 "Central bank": 1
 }
@@ -28,22 +46,39 @@
 {
 "c": "BG",
 "name": "Bulgaria",
-"count": 121,
+"count": 209,
 "types": {
 "Bank": 23,
+"Investment firm": 49,
+"Systematic internaliser": 4,
+"AIFM": 30,
+"UCITS management company": 30,
+"European Crowdfunding Service Provider": 5,
 "Insurer": 45,
+"EVC": 1,
 "Pension fund": 52,
-"Central bank": 1
+"Central bank": 1,
+"Approved publication arrangement": 1,
+"Multilateral trading facility": 2,
+"Regulated market": 1
 }
 },
 {
 "c": "CY",
 "name": "Cyprus",
-"count": 598,
+"count": 916,
 "types": {
 "Bank": 16,
+"Investment firm": 262,
+"AIFM": 46,
 "Pension fund": 546,
 "Insurer": 29,
+"UCITS management company": 6,
+"European Crowdfunding Service Provider": 2,
+"EVC": 1,
+"Multilateral trading facility": 2,
+"Regulated market": 1,
+"Systematic internaliser": 6,
 "Financial institution": 6,
 "Central bank": 1
 }
@@ -51,34 +86,61 @@
 {
 "c": "CZ",
 "name": "Czechia",
-"count": 116,
+"count": 229,
 "types": {
+"Investment firm": 46,
+"Multilateral trading facility": 3,
+"Organised trading facility": 1,
 "Bank": 46,
 "Pension fund": 48,
+"AIFM": 71,
 "Insurer": 21,
+"UCITS management company": 10,
+"Regulated market": 2,
+"European Crowdfunding Service Provider": 7,
+"Systematic internaliser": 3,
 "Central bank": 1
 }
 },
 {
 "c": "DE",
 "name": "Germany",
-"count": 1842,
+"count": 2827,
 "types": {
 "Bank": 1242,
+"Investment firm": 1867,
+"Systematic internaliser": 19,
+"EVC": 75,
+"Multilateral trading facility": 11,
+"AIFM": 133,
+"UCITS management company": 36,
 "Insurer": 323,
 "Pension fund": 273,
+"Regulated market": 8,
+"European Crowdfunding Service Provider": 2,
+"ESF": 1,
 "Central bank": 1,
-"Financial institution": 3
+"Financial institution": 3,
+"Organised trading facility": 1
 }
 },
 {
 "c": "DK",
 "name": "Denmark",
-"count": 79,
+"count": 304,
 "types": {
+"AIFM": 72,
+"Investment firm": 199,
+"Systematic internaliser": 8,
 "Bank": 77,
+"Approved reporting mechanism": 1,
+"EVC": 7,
+"UCITS management company": 9,
 "Central bank": 1,
-"Financial institution": 1
+"Financial institution": 1,
+"European Crowdfunding Service Provider": 2,
+"Multilateral trading facility": 1,
+"Regulated market": 1
 }
 },
 {
@@ -93,228 +155,429 @@
 {
 "c": "EE",
 "name": "Estonia",
-"count": 40,
+"count": 57,
 "types": {
 "Bank": 24,
+"Investment firm": 11,
 "Insurer": 15,
-"Central bank": 1
+"UCITS management company": 6,
+"AIFM": 5,
+"Central bank": 1,
+"European Crowdfunding Service Provider": 1,
+"Multilateral trading facility": 1,
+"Regulated market": 1
 }
 },
 {
 "c": "ES",
 "name": "Spain",
-"count": 1717,
+"count": 2356,
 "types": {
 "Bank": 185,
+"Investment firm": 312,
+"AIFM": 337,
+"EVC": 95,
+"UCITS management company": 110,
 "Pension fund": 1224,
 "Insurer": 254,
 "Financial institution": 53,
-"Central bank": 1
+"European Crowdfunding Service Provider": 27,
+"ESF": 8,
+"Multilateral trading facility": 3,
+"Central bank": 1,
+"Approved publication arrangement": 2,
+"Approved reporting mechanism": 1,
+"Regulated market": 4,
+"Organised trading facility": 4
 }
 },
 {
 "c": "FI",
 "name": "Finland",
-"count": 201,
+"count": 319,
 "types": {
-"Bank": 126,
+"Bank": 129,
+"Investment firm": 129,
+"Systematic internaliser": 1,
+"AIFM": 37,
+"UCITS management company": 19,
 "Insurer": 42,
+"EVC": 22,
 "Pension fund": 32,
-"Central bank": 1
+"Multilateral trading facility": 1,
+"Regulated market": 1,
+"Central bank": 1,
+"European Crowdfunding Service Provider": 1
 }
 },
 {
 "c": "FR",
 "name": "France",
-"count": 782,
+"count": 1580,
 "types": {
 "Bank": 392,
+"Investment firm": 269,
+"Systematic internaliser": 11,
+"AIFM": 562,
+"European Crowdfunding Service Provider": 57,
 "Financial institution": 131,
 "Insurer": 234,
 "Pension fund": 23,
-"Central bank": 2
+"UCITS management company": 225,
+"EVC": 4,
+"Multilateral trading facility": 8,
+"Organised trading facility": 7,
+"Central bank": 2,
+"Regulated market": 1,
+"ESF": 1
 }
 },
 {
 "c": "GR",
 "name": "Greece",
-"count": 104,
+"count": 198,
 "types": {
 "Bank": 35,
+"Systematic internaliser": 2,
+"AIFM": 19,
+"UCITS management company": 13,
+"Investment firm": 57,
 "Pension fund": 31,
 "Insurer": 31,
+"European Crowdfunding Service Provider": 2,
 "Central bank": 1,
+"Regulated market": 3,
+"Approved publication arrangement": 1,
+"Multilateral trading facility": 1,
+"Approved reporting mechanism": 1,
 "Financial institution": 6
 }
 },
 {
 "c": "HR",
 "name": "Croatia",
-"count": 79,
+"count": 112,
 "types": {
 "Bank": 21,
+"Investment firm": 21,
 "Insurer": 14,
+"AIFM": 20,
+"UCITS management company": 8,
 "Pension fund": 43,
-"Central bank": 1
+"Central bank": 1,
+"Systematic internaliser": 1,
+"Approved publication arrangement": 1,
+"Multilateral trading facility": 1,
+"Regulated market": 1
 }
 },
 {
 "c": "HU",
 "name": "Hungary",
-"count": 105,
+"count": 302,
 "types": {
+"AIFM": 137,
+"UCITS management company": 24,
 "Insurer": 36,
 "Pension fund": 28,
 "Bank": 40,
-"Central bank": 1
+"Investment firm": 33,
+"Systematic internaliser": 6,
+"Regulated market": 2,
+"Approved publication arrangement": 1,
+"Central bank": 1,
+"Multilateral trading facility": 1
 }
 },
 {
 "c": "IE",
 "name": "Ireland",
-"count": 2266,
+"count": 2524,
 "types": {
 "Bank": 236,
+"Investment firm": 116,
+"Systematic internaliser": 11,
 "Pension fund": 1799,
+"AIFM": 109,
 "Insurer": 201,
+"EVC": 12,
+"UCITS management company": 92,
+"Approved reporting mechanism": 1,
 "Financial institution": 29,
-"Central bank": 1
+"European Crowdfunding Service Provider": 7,
+"Central bank": 1,
+"Multilateral trading facility": 4,
+"Organised trading facility": 2,
+"Regulated market": 1
+}
+},
+{
+"c": "IS",
+"name": "Iceland",
+"count": 46,
+"types": {
+"Investment firm": 12,
+"AIFM": 34,
+"UCITS management company": 6,
+"Multilateral trading facility": 1,
+"Regulated market": 1
 }
 },
 {
 "c": "IT",
 "name": "Italy",
-"count": 675,
+"count": 1023,
 "types": {
 "Bank": 417,
+"Investment firm": 460,
+"Systematic internaliser": 7,
+"AIFM": 103,
+"UCITS management company": 45,
 "Insurer": 77,
 "Pension fund": 168,
+"EVC": 24,
 "Central bank": 1,
+"European Crowdfunding Service Provider": 37,
+"Multilateral trading facility": 3,
+"Regulated market": 2,
 "Financial institution": 12
+}
+},
+{
+"c": "LI",
+"name": "Liechtenstein",
+"count": 114,
+"types": {
+"AIFM": 18,
+"UCITS management company": 13,
+"Investment firm": 94,
+"Multilateral trading facility": 1,
+"Systematic internaliser": 1
 }
 },
 {
 "c": "LT",
 "name": "Lithuania",
-"count": 171,
+"count": 226,
 "types": {
 "Bank": 80,
-"Pension fund": 63,
+"Investment firm": 23,
+"Systematic internaliser": 1,
 "Insurer": 20,
+"UCITS management company": 11,
+"Pension fund": 63,
+"European Crowdfunding Service Provider": 16,
+"AIFM": 10,
 "Central bank": 1,
+"Multilateral trading facility": 1,
+"Regulated market": 1,
 "Financial institution": 7
 }
 },
 {
 "c": "LU",
 "name": "Luxembourg",
-"count": 436,
+"count": 828,
 "types": {
-"Bank": 122,
+"Bank": 124,
+"Investment firm": 138,
+"Systematic internaliser": 3,
+"AIFM": 273,
+"UCITS management company": 153,
 "Financial institution": 19,
 "Insurer": 281,
+"EVC": 20,
 "Central bank": 1,
-"Pension fund": 13
+"Pension fund": 13,
+"Approved reporting mechanism": 1,
+"Multilateral trading facility": 1,
+"Regulated market": 1,
+"ESF": 1
 }
 },
 {
 "c": "LV",
 "name": "Latvia",
-"count": 109,
+"count": 146,
 "types": {
 "Bank": 35,
+"Investment firm": 21,
 "Insurer": 16,
+"UCITS management company": 7,
+"AIFM": 3,
 "Pension fund": 52,
+"European Crowdfunding Service Provider": 7,
+"EVC": 1,
 "Central bank": 1,
+"Multilateral trading facility": 1,
+"Regulated market": 1,
 "Financial institution": 5
 }
 },
 {
 "c": "MT",
 "name": "Malta",
-"count": 137,
+"count": 270,
 "types": {
 "Bank": 22,
+"Investment firm": 81,
+"AIFM": 47,
 "Insurer": 68,
+"UCITS management company": 19,
+"EVC": 1,
 "Pension fund": 46,
-"Central bank": 1
+"Central bank": 1,
+"European Crowdfunding Service Provider": 2,
+"Multilateral trading facility": 1,
+"Regulated market": 1
 }
 },
 {
 "c": "NL",
 "name": "Netherlands",
-"count": 467,
+"count": 887,
 "types": {
 "Bank": 92,
-"Insurer": 168,
+"Investment firm": 221,
+"Systematic internaliser": 9,
 "Pension fund": 206,
-"Central bank": 1
+"Insurer": 168,
+"AIFM": 117,
+"EVC": 57,
+"UCITS management company": 16,
+"European Crowdfunding Service Provider": 20,
+"Organised trading facility": 4,
+"Multilateral trading facility": 14,
+"Approved publication arrangement": 5,
+"Approved reporting mechanism": 3,
+"Regulated market": 5,
+"Central bank": 1,
+"ESF": 3
+}
+},
+{
+"c": "NO",
+"name": "Norway",
+"count": 196,
+"types": {
+"AIFM": 68,
+"Investment firm": 93,
+"EVC": 21,
+"UCITS management company": 26,
+"Systematic internaliser": 1,
+"Multilateral trading facility": 1,
+"Regulated market": 2
 }
 },
 {
 "c": "PL",
 "name": "Poland",
-"count": 799,
+"count": 1222,
 "types": {
+"AIFM": 384,
 "Bank": 568,
+"UCITS management company": 24,
 "Insurer": 50,
+"Investment firm": 37,
 "Pension fund": 180,
-"Central bank": 1
+"ESF": 1,
+"Multilateral trading facility": 2,
+"Regulated market": 3,
+"European Crowdfunding Service Provider": 4,
+"Central bank": 1,
+"Organised trading facility": 1,
+"Systematic internaliser": 1
 }
 },
 {
 "c": "PT",
 "name": "Portugal",
-"count": 418,
+"count": 545,
 "types": {
 "Bank": 138,
+"Investment firm": 81,
 "Pension fund": 241,
+"European Crowdfunding Service Provider": 5,
 "Insurer": 37,
+"AIFM": 59,
+"EVC": 3,
 "Central bank": 1,
+"UCITS management company": 17,
+"Multilateral trading facility": 1,
+"Regulated market": 2,
 "Financial institution": 1
 }
 },
 {
 "c": "RO",
 "name": "Romania",
-"count": 119,
+"count": 181,
 "types": {
 "Insurer": 38,
+"AIFM": 23,
+"Investment firm": 25,
+"UCITS management company": 14,
 "Bank": 61,
+"Systematic internaliser": 2,
+"Regulated market": 2,
+"Organised trading facility": 1,
 "Financial institution": 2,
+"European Crowdfunding Service Provider": 8,
 "Pension fund": 17,
-"Central bank": 1
+"Central bank": 1,
+"Multilateral trading facility": 1,
+"Approved reporting mechanism": 1
 }
 },
 {
 "c": "SE",
 "name": "Sweden",
-"count": 179,
+"count": 454,
 "types": {
 "Bank": 171,
+"EVC": 74,
+"Investment firm": 122,
+"AIFM": 88,
+"UCITS management company": 41,
+"European Crowdfunding Service Provider": 6,
 "Financial institution": 7,
+"Approved publication arrangement": 1,
+"Multilateral trading facility": 3,
+"Regulated market": 2,
 "Central bank": 1
 }
 },
 {
 "c": "SI",
 "name": "Slovenia",
-"count": 46,
+"count": 62,
 "types": {
 "Bank": 14,
+"Investment firm": 10,
+"AIFM": 7,
 "Insurer": 13,
 "Central bank": 1,
-"Pension fund": 18
+"Pension fund": 18,
+"UCITS management company": 5,
+"Multilateral trading facility": 1,
+"Regulated market": 1
 }
 },
 {
 "c": "SK",
 "name": "Slovakia",
-"count": 87,
+"count": 126,
 "types": {
 "Bank": 25,
+"Investment firm": 26,
+"AIFM": 9,
+"UCITS management company": 4,
+"European Crowdfunding Service Provider": 7,
 "Pension fund": 35,
 "Insurer": 26,
+"Multilateral trading facility": 1,
+"Regulated market": 1,
+"EVC": 2,
 "Central bank": 1
 }
 }
