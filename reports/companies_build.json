@@ -1,5 +1,5 @@
 {
- "started": "2026-10-24T00:51:23Z",
+ "started": "2026-10-24T00:52:26Z",
  "sources": {
   "esma": {
    "error": "<HTTPError 502: 'Bad Gateway'>"
@@ -87,7 +87,5 @@
    "rows": 831
   }
  },
- "total": 12472,
- "countries": 28,
- "no_country": 0
+ "aborted": "Sources failed: ['esma']. Kept the previous directory unchanged."
 }
