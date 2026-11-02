@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-26T08:57:53Z",
+"updated_at": "2026-11-02T11:11:08Z",
 "countries": [
 {
 "c": "AT",
@@ -105,11 +105,11 @@
 {
 "c": "DE",
 "name": "Germany",
-"count": 2825,
+"count": 2824,
 "types": {
 "Bank": 1242,
-"Investment firm": 1865,
-"Systematic internaliser": 19,
+"Investment firm": 1864,
+"Systematic internaliser": 18,
 "EVC": 75,
 "Multilateral trading facility": 11,
 "AIFM": 133,
@@ -155,9 +155,9 @@
 {
 "c": "EE",
 "name": "Estonia",
-"count": 57,
+"count": 56,
 "types": {
-"Bank": 24,
+"Bank": 23,
 "Investment firm": 11,
 "Insurer": 15,
 "UCITS management company": 6,
@@ -171,7 +171,7 @@
 {
 "c": "ES",
 "name": "Spain",
-"count": 2356,
+"count": 2357,
 "types": {
 "Bank": 185,
 "Investment firm": 312,
@@ -194,10 +194,10 @@
 {
 "c": "FI",
 "name": "Finland",
-"count": 317,
+"count": 312,
 "types": {
 "Bank": 126,
-"Investment firm": 129,
+"Investment firm": 125,
 "Systematic internaliser": 1,
 "AIFM": 37,
 "UCITS management company": 20,
@@ -213,10 +213,10 @@
 {
 "c": "FR",
 "name": "France",
-"count": 1578,
+"count": 1579,
 "types": {
 "Bank": 392,
-"Investment firm": 268,
+"Investment firm": 269,
 "Systematic internaliser": 11,
 "AIFM": 563,
 "European Crowdfunding Service Provider": 57,
@@ -292,7 +292,7 @@
 {
 "c": "IE",
 "name": "Ireland",
-"count": 2524,
+"count": 2525,
 "types": {
 "Bank": 236,
 "Investment firm": 116,
@@ -300,7 +300,7 @@
 "Pension fund": 1799,
 "AIFM": 109,
 "Insurer": 201,
-"EVC": 12,
+"EVC": 13,
 "UCITS management company": 92,
 "Approved reporting mechanism": 1,
 "Financial institution": 29,
@@ -377,13 +377,13 @@
 {
 "c": "LU",
 "name": "Luxembourg",
-"count": 826,
+"count": 693,
 "types": {
 "Bank": 122,
 "Investment firm": 138,
 "Systematic internaliser": 3,
-"AIFM": 273,
 "UCITS management company": 153,
+"AIFM": 24,
 "Financial institution": 19,
 "Insurer": 281,
 "EVC": 20,
@@ -435,14 +435,14 @@
 {
 "c": "NL",
 "name": "Netherlands",
-"count": 888,
+"count": 890,
 "types": {
 "Bank": 92,
 "Investment firm": 221,
 "Systematic internaliser": 9,
 "Insurer": 168,
-"AIFM": 117,
-"EVC": 58,
+"AIFM": 118,
+"EVC": 59,
 "UCITS management company": 16,
 "European Crowdfunding Service Provider": 20,
 "Organised trading facility": 4,
@@ -472,13 +472,13 @@
 {
 "c": "PL",
 "name": "Poland",
-"count": 1222,
+"count": 1223,
 "types": {
 "AIFM": 384,
 "Bank": 568,
 "UCITS management company": 24,
 "Insurer": 50,
-"Investment firm": 37,
+"Investment firm": 38,
 "Pension fund": 180,
 "ESF": 1,
 "Multilateral trading facility": 2,
@@ -511,13 +511,13 @@
 {
 "c": "RO",
 "name": "Romania",
-"count": 181,
+"count": 180,
 "types": {
 "Insurer": 38,
 "AIFM": 23,
 "Investment firm": 25,
 "UCITS management company": 14,
-"Bank": 61,
+"Bank": 60,
 "Systematic internaliser": 2,
 "Regulated market": 2,
 "Organised trading facility": 1,
@@ -532,11 +532,11 @@
 {
 "c": "SE",
 "name": "Sweden",
-"count": 456,
+"count": 455,
 "types": {
 "Bank": 171,
 "EVC": 74,
-"Investment firm": 122,
+"Investment firm": 121,
 "AIFM": 90,
 "UCITS management company": 41,
 "European Crowdfunding Service Provider": 6,

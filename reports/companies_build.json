@@ -1,16 +1,16 @@
 {
- "started": "2026-10-26T08:57:31Z",
+ "started": "2026-11-02T11:10:45Z",
  "sources": {
   "esma": {
-   "entities": 13900,
-   "kept_active_head_offices": 10537
+   "entities": 13898,
+   "kept_active_head_offices": 10287
   },
   "ecb_mfi": {
    "links": [
-    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261023.csv",
-    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261023.csv.gz",
-    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261023.csv",
-    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261023.csv.gz"
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261030.csv",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261030.csv.gz",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261030.csv",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261030.csv.gz"
    ],
    "header": [
     "RIAD_CODE",
@@ -28,11 +28,11 @@
     "HEAD_LEI",
     "REPORT"
    ],
-   "rows": 5321,
-   "kept": 4926,
+   "rows": 5320,
+   "kept": 4924,
    "box_values": {
-    "Credit Institution": 4607,
-    "Money Market Fund": 395,
+    "Credit Institution": 4605,
+    "Money Market Fund": 396,
     "Other Institution": 290,
     "Central Bank": 29
    }
@@ -88,7 +88,7 @@
    "rows": 831
   }
  },
- "total": 19232,
+ "total": 19096,
  "countries": 31,
  "no_country": 0
 }
