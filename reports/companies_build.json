@@ -1,16 +1,16 @@
 {
- "started": "2026-11-02T11:10:45Z",
+ "started": "2026-11-09T11:34:22Z",
  "sources": {
   "esma": {
-   "entities": 13898,
-   "kept_active_head_offices": 10287
+   "entities": 13900,
+   "kept_active_head_offices": 10536
   },
   "ecb_mfi": {
    "links": [
-    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261030.csv",
-    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261030.csv.gz",
-    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261030.csv",
-    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261030.csv.gz"
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261106.csv",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_261106.csv.gz",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261106.csv",
+    "/stats/money/mfi/general/html/dla/mfi_MID/mfi_csv_update_261106.csv.gz"
    ],
    "header": [
     "RIAD_CODE",
@@ -88,7 +88,7 @@
    "rows": 831
   }
  },
- "total": 19096,
+ "total": 19232,
  "countries": 31,
  "no_country": 0
 }

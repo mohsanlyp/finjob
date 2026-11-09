@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-11-02T11:11:08Z",
+"updated_at": "2026-11-09T11:34:50Z",
 "countries": [
 {
 "c": "AT",
@@ -66,10 +66,10 @@
 {
 "c": "CY",
 "name": "Cyprus",
-"count": 917,
+"count": 916,
 "types": {
 "Bank": 16,
-"Investment firm": 263,
+"Investment firm": 262,
 "AIFM": 46,
 "Pension fund": 546,
 "Insurer": 29,
@@ -105,13 +105,13 @@
 {
 "c": "DE",
 "name": "Germany",
-"count": 2824,
+"count": 2819,
 "types": {
-"Bank": 1242,
-"Investment firm": 1864,
+"Bank": 1239,
+"Investment firm": 1860,
 "Systematic internaliser": 18,
 "EVC": 75,
-"Multilateral trading facility": 11,
+"Multilateral trading facility": 12,
 "AIFM": 133,
 "UCITS management company": 36,
 "Insurer": 323,
@@ -120,8 +120,7 @@
 "European Crowdfunding Service Provider": 2,
 "ESF": 1,
 "Central bank": 1,
-"Financial institution": 3,
-"Organised trading facility": 1
+"Financial institution": 3
 }
 },
 {
@@ -171,10 +170,10 @@
 {
 "c": "ES",
 "name": "Spain",
-"count": 2357,
+"count": 2356,
 "types": {
 "Bank": 185,
-"Investment firm": 312,
+"Investment firm": 311,
 "AIFM": 337,
 "EVC": 95,
 "UCITS management company": 110,
@@ -194,12 +193,12 @@
 {
 "c": "FI",
 "name": "Finland",
-"count": 312,
+"count": 313,
 "types": {
 "Bank": 126,
 "Investment firm": 125,
 "Systematic internaliser": 1,
-"AIFM": 37,
+"AIFM": 38,
 "UCITS management company": 20,
 "Insurer": 42,
 "EVC": 22,
@@ -213,17 +212,17 @@
 {
 "c": "FR",
 "name": "France",
-"count": 1579,
+"count": 1583,
 "types": {
 "Bank": 392,
 "Investment firm": 269,
 "Systematic internaliser": 11,
-"AIFM": 563,
+"AIFM": 567,
 "European Crowdfunding Service Provider": 57,
 "Financial institution": 131,
 "Insurer": 234,
 "Pension fund": 23,
-"UCITS management company": 224,
+"UCITS management company": 225,
 "EVC": 4,
 "Multilateral trading facility": 8,
 "Organised trading facility": 7,
@@ -294,7 +293,7 @@
 "name": "Ireland",
 "count": 2525,
 "types": {
-"Bank": 236,
+"Bank": 237,
 "Investment firm": 116,
 "Systematic internaliser": 11,
 "Pension fund": 1799,
@@ -377,13 +376,13 @@
 {
 "c": "LU",
 "name": "Luxembourg",
-"count": 693,
+"count": 829,
 "types": {
-"Bank": 122,
-"Investment firm": 138,
+"Bank": 124,
+"Investment firm": 139,
 "Systematic internaliser": 3,
+"AIFM": 272,
 "UCITS management company": 153,
-"AIFM": 24,
 "Financial institution": 19,
 "Insurer": 281,
 "EVC": 20,
@@ -532,9 +531,9 @@
 {
 "c": "SE",
 "name": "Sweden",
-"count": 455,
+"count": 457,
 "types": {
-"Bank": 171,
+"Bank": 173,
 "EVC": 74,
 "Investment firm": 121,
 "AIFM": 90,
